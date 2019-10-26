@@ -17,7 +17,8 @@ class OrderController extends Controller
     private $refund;
 
     /**
-     * @return \Illuminate\Http\JsonResponse
+     * @return mixed
+     * @throws \Exception
      */
     public function index()
     {
@@ -25,7 +26,7 @@ class OrderController extends Controller
         list($page, $limit, $user_id, $product_id, $wallet, $fromAmount, $toAmount, $from, $to, $day, $week, $month) = $this->getRequestInputs();
 
         //get all orders by pagination
-        $orders = $orderDB->list($limit, $user_id, $product_id, $wallet, $fromAmount, $toAmount, $from, $to, $day, $week, $month);
+        $orders = $orderDB->getList($limit, $user_id, $product_id, $wallet, $fromAmount, $toAmount, $from, $to, $day, $week, $month);
 
         if (!$orders) {
             return response()

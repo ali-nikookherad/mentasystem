@@ -35,8 +35,9 @@ class OrderDB
      * @param $week
      * @param $month
      * @return mixed
+     * @throws \Exception
      */
-    public function list($limit, $user_id, $product_id, $wallet, $fromAmount, $toAmount, $from, $to, $day, $week, $month)
+    public function getList($limit, $user_id, $product_id, $wallet, $fromAmount, $toAmount, $from, $to, $day, $week, $month)
     {
         $filter = [
             ["paid_at", "!=", null]
@@ -52,6 +53,14 @@ class OrderDB
         //wallet filter
         if (!is_null($wallet)) {
             $treasuryAccountInstance = $this->walletToTreasuryAcc($wallet);
+            if (!$treasuryAccountInstance instanceof Account) {
+                throw new \Exception("your filter is not correct! your wallet does not exist...",400);
+                /*                return request()
+                                    ->json([
+                                        "message" => "your filter is not correct",
+                                        "error" => "wallet does not exist",
+                                    ], 400);*/
+            }
             array_push($filter, ["treasury_account_id", "=", $treasuryAccountInstance->id]);
         }
 
