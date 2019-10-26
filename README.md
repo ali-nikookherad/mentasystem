@@ -24,19 +24,30 @@ for test.  As [John Gruber] writes on the [Markdown site][df1]
 > for test 2
 
 
-### Installation
+### Requirement
 
 wallet requires [laravel framework](https://laravel.com/) v5.8+ to run.
 
-Install the dependencies and devDependencies and start the server.
+set this configuration into your app.
 
+```sh
+$ composer config repositories.private-packagist
+$ composer https://repo.packagist.com/mentasystem/
+$ composer config repositories.packagist.org false
+
+```
+### Installation
 ```sh
 $ cd your app directory
 $ composer required mentasystem/wallet
 $ php artisan migrate
 ```
 
+##### Add this class provider into your config/app.php file
 
+```sh
+$ \Mentasystem\Wallet\WalletServiceProvider::class
+```
 ### Development
 
 Want to contribute? Great!
