@@ -134,12 +134,13 @@ class AccountController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @throws \Exception
      */
-    public function destroy(AccountDB $repository, $id)
+    public function destroy($id)
     {
-        $repository->deleteAccount($id);
+        $accountDB=new AccountDB();
+        $accountDB->deleteAccount($id);
         return \response()
             ->json([
-                'message' => __("messages.user_success_deleted")
+                null
             ], 204);
     }
 
@@ -151,6 +152,7 @@ class AccountController extends Controller
     public function charge(Request $request)
     {
         $accountDB = new AccountDB();
+
         try {
             /*----------charge account credit-----------*/
             \DB::beginTransaction();

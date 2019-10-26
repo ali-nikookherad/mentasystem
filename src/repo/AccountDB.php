@@ -3,6 +3,7 @@
 
 namespace Mentasystem\Wallet\repo;
 
+use Illuminate\Support\Facades\DB;
 use Mentasystem\Wallet\Entities\Account;
 
 /**
@@ -134,10 +135,23 @@ class AccountDB
      * @param $id
      * @throws \Exception
      */
-    public function deleteAccount($id)
+    public function deleteAccount($user_id)
     {
-        $account = Account::find($id);
-        $account->delete();
+        try{
+            DB::beginTransaction();
+            $accounts = Account::where("user_id",$user_id)->with("credits")->get();
+            foreach ($accounts as $account) {
+                $credits=$account->credits;
+                foreach ($credits as $credit) {
+                    $credit->delete();
+                }
+                $account->delete();
+            }
+            DB::commit();
+        }catch (\Exception $e){
+            DB::rollBack();
+            throw new \Exception($e->getMessage(),400);
+        }
     }
 
     /**
