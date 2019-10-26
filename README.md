@@ -4,11 +4,8 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ali-nikookherad/mentasystem.git)
 
 wallet first version, for test .
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
 
-# first version!
+# version 1.0.0 !
 
   - create system wallet types
   - create your system account types
