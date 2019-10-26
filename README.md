@@ -26,9 +26,9 @@ for test.  As [John Gruber] writes on the [Markdown site][df1]
 
 ### Requirement
 
-wallet requires [laravel framework](https://laravel.com/) v5.8+ to run.
+wallet requires [laravel framework](https://laravel.com/) v5.8 to run.
 
-set this configuration into your app.
+set this repository into your OS.
 
 ```sh
 $ composer config repositories.private-packagist
