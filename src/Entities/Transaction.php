@@ -15,15 +15,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
-    public $validate = [
-        "order_id" => "required",
-        "from_account_id" => "required",
-        "to_account_id" => "required",
-        "amount" => "required",
-        "cashout" => "required",
-        "type" => "required",
-        "reverse" => "required",
-    ];
+    protected $table="menta_transactions";
+
     protected $fillable = [
         "order_id",
         "from_account_id",

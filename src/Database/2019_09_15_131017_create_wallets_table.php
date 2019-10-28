@@ -13,7 +13,7 @@ class CreateWalletsTable extends Migration
      */
     public function up()
     {
-        Schema::create('wallets', function (Blueprint $table) {
+        Schema::create('menta_wallets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("title")->nullable();
             $table->string("type")->nullable();

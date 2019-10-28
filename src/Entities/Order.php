@@ -16,16 +16,9 @@ use Mentasystem\Account\Entities\Credit;
 
 class Order extends Model
 {
-    public $validate = [
-        "user_id" => "required",
-        "goods_id" => "required",
-        "from_account_id" => "required",
-        "to_account_id" => "required",
-        "refund" => "required",
-        "cashout" => "required",
-        "amount" => "required",
-        "treasury_account_id" => "required",
-    ];
+
+    protected $table="menta_orders";
+
     protected $fillable = [
         "user_id",
         "goods_id",

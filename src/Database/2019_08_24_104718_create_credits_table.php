@@ -13,7 +13,7 @@ class CreateCreditsTable extends Migration
      */
     public function up()
     {
-        Schema::create('credits', function (Blueprint $table) {
+        Schema::create('menta_credits', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger("account_id");
             $table->unsignedInteger("club_id")->nullable();

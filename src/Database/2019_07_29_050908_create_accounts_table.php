@@ -12,7 +12,7 @@ class CreateAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::create('menta_accounts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id')->nullable();
             $table->unsignedInteger('treasury_id')->nullable();

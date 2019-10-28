@@ -11,7 +11,8 @@ use Illuminate\Notifications\Notifiable;
  */
 class Account extends Model
 {
-    protected $table = 'accounts';
+    protected $table = 'menta_accounts';
+
     protected $fillable = [
         "account_type_id",
         "treasury_id",

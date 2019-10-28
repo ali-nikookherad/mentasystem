@@ -15,6 +15,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wallet extends Model
 {
+    protected $table="menta_wallets";
+
     protected $fillable = [
         "title",
         "type",

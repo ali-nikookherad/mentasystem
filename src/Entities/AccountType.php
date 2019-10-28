@@ -16,6 +16,8 @@ use Illuminate\Database\Eloquent\Model;
 class AccountType extends Model
 {
 
+    protected $tabale="menta_account_types";
+
     protected $fillable = [
         "type",
         "wallet_id",
