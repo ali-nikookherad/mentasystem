@@ -17,7 +17,7 @@ use Mentasystem\Account\Entities\Credit;
 class Order extends Model
 {
 
-    protected $table="menta_orders";
+    protected $table="orders";
 
     protected $fillable = [
         "user_id",

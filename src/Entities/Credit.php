@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Credit extends Model
 {
-    protected $table="menta_credits";
+    protected $table="credits";
 
     protected $fillable = [
         "account_id",

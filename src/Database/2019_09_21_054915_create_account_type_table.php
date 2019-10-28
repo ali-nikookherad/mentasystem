@@ -12,7 +12,7 @@ class CreateAccountTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('menta_account_types', function (Blueprint $table) {
+        Schema::create('account_types', function (Blueprint $table) {
             $table->bigIncrements('id');
 //            $table->enum("type", ["wallet", "customer", "merchant", "taxi", "club", "agent", "bank", "treasury", "campaign", "gift"]);
             $table->string("type");
