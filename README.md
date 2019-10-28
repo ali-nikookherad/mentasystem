@@ -18,11 +18,6 @@ You can also:
     - get transactions and filter it
     - get orders and filter it
 
-for test.  As [John Gruber] writes on the [Markdown site][df1]
-
-> for test 1
-> for test 2
-
 
 ### Requirement
 
