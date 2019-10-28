@@ -105,17 +105,17 @@ class OrderDB
 
     /**
      * @param $request
-     * @return \Illuminate\Http\JsonResponse
-     * @throws \Exception
+     * @return mixed
      */
     public function create($request)
     {
         $accountDB = new AccountDB();
+        $walletDB = new WalletDB();
         $from_user_id = $request["from_user_id"];
         $to_user_id = $request["to_user_id"];
         $amount = $request["amount"];
         $product_id = $request["product_id"];
-        $walletDB = new WalletDB();
+        $refund = $request["refund"]?$request["refund"]:null;
         $result = [];
         try {
             \DB::beginTransaction();
@@ -167,6 +167,7 @@ class OrderDB
                     "type" => "request",
                     "paid_at" => null,
                     "treasury_account_id" => $treasuryAccountInstance->id,
+                    "refund" => $refund,
                 ]);
                 array_push($result, $orderInstance->toArray());
 
