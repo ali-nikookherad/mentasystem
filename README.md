@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://github.com/ali-nikookherad/mentasystem.git)
 
-wallet first version, for test .
+wallet first version (alpha release) .
 
 # version 1.0.0 !
 
@@ -50,5 +50,5 @@ $ \Mentasystem\Wallet\WalletServiceProvider::class
 ```
 ### Development
 
-Want to contribute? Great!
+Want to be a contributer? Great!
 
