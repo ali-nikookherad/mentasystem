@@ -1,11 +1,10 @@
 <?php
-
-namespace Modules\Wallet\Http\Controllers\Api;
+namespace Mentasystem\Wallet\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use Modules\Wallet\repo\CreditDB;
+use Mentasystem\Wallet\repo\CreditDB;
 
 class CreditController extends Controller
 {
