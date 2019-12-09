@@ -20,11 +20,11 @@ class CreditController extends Controller
 
     /**
      * @param Request $request
-     * @param CreditDB $creditDB
-     * @return \Illuminate\Http\JsonResponse
+     * @return mixed
      */
-    public function store(Request $request, CreditDB $creditDB)
+    public function store(Request $request)
     {
+        $creditDB = new CreditDB();
         $data = [
             "amount" => $request->input("amount"),
             "treasury_id" => $request->input("treasury_id")
