@@ -60,7 +60,7 @@ class WalletController extends Controller
                 $accountData = [
                     "account_type_id" => $instanceTypeAccount->id,
                     "user_id" => null,
-                    "min_transaction" => 0,
+//                    "min_transaction" => 0,
                     "revoked" => false,
                 ];
                 $instanceAccount = $accountDB->create($accountData);
@@ -68,7 +68,7 @@ class WalletController extends Controller
                 //treasury account credit
                 $creditData = [
                     "account_id" => $instanceAccount->id,
-                    "wallet_id" => $walletInstance->id,
+//                    "wallet_id" => $walletInstance->id,
                     "treasury_id" => 0,
                     "club_id" => isset($data["club_id"]) ? $data["club_id"] : 0,
                     "amount" => 0,
