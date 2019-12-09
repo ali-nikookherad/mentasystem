@@ -21,8 +21,9 @@ class WalletController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @throws \Exception
      */
-    public function store(Request $request, WalletDB $walletDB)
+    public function store(Request $request)
     {
+        $walletDB=new WalletDB;
         $data = $request->all();
         $accountDB = new AccountDB();
         $accountTypeDB = new AccountTypeDB();
