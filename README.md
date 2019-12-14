@@ -23,11 +23,10 @@ You can also:
 
 wallet requires [laravel framework](https://laravel.com/) v5.8 to run.
 
-```
+
 ### Installation
 ```sh
 $ composer require mentasystem/wallet
-$ php artisan migrate
 ```
 
 ##### Add this class provider into your config/app.php file
