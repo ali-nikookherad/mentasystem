@@ -23,13 +23,6 @@ You can also:
 
 wallet requires [laravel framework](https://laravel.com/) v5.8 to run.
 
-set this repository into your OS.
-
-```sh
-$ composer config repositories.private-packagist
-$ composer https://repo.packagist.com/mentasystem/
-$ composer config repositories.packagist.org false
-
 ```
 ### Installation
 ```sh
@@ -42,6 +35,13 @@ $ php artisan migrate
 ```sh
 $ \Mentasystem\Wallet\WalletServiceProvider::class
 ```
+
+### run
+```sh
+$ php artisan migrate
+```
+
+
 ### Development
 
 Want to be a contributer? Great!
