@@ -33,8 +33,7 @@ $ composer config repositories.packagist.org false
 ```
 ### Installation
 ```sh
-$ cd your app directory
-$ composer required mentasystem/wallet
+$ composer require mentasystem/wallet
 $ php artisan migrate
 ```
 
